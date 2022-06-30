@@ -1,12 +1,19 @@
 **Grsql** is a great tool to allow you set up your remote sqlite database as service and **CRUD**(create/read/update/delete) it using gRPC.
 
+## Why Create This 
+
+Since I often use micro-service and database intergration is often required.
+for some "heavy" database like `MySQL`, `MongoDB` or something similar, it is a luxury to use them.
+A sqlite database with fast server backend would be a great solution for this.
+This lead to the birth of `Grsql`.
+
 ## How to Use 
 
 this project consist of two parts: 
 - server 
 - client 
 
-each part can run independently. the `server` normally run on remote/cloud side, the `client` make request to it.
+each part can run **independently**. the `server` normally run on remote/cloud side, the `client` make request to it.
 
 use the following code run server,
 ```sh 
