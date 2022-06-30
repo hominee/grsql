@@ -5,6 +5,7 @@
 Since I often use micro-service and database intergration is often required.
 for some "heavy" database like `MySQL`, `MongoDB` or something similar, it is a luxury to use them.
 A sqlite database with fast server backend would be a great solution for this.
+
 This lead to the birth of `Grsql`.
 
 ## How to Use 
@@ -31,7 +32,7 @@ It will insert the file's content `input.txt` into remote server, then read it, 
 
 First of all, you need to be familiar with [proto-buffer](https://developers.google.com/protocol-buffers/docs/overview), if not, go to the site and see around.
 
-since grsql is built on crates [toic](https://github.com/hyperium/tonic), you need some pre-developing experience of [rust](https://rust-lang.org), as well as tonic. 
+since grsql is built on crates [tonic](https://github.com/hyperium/tonic), you need some pre-developing experience of [rust](https://rust-lang.org), as well as tonic. 
 see these [examples](https://github.com/hyperium/tonic/tree/master/examples) to quick start.
 
 you can modify/add/delete the `message` and `service`  in `proto/data.proto` according to your requests
@@ -46,8 +47,11 @@ gRPC is designed to deal with service that processes small and frequent communic
 It is better that the file is less than 1M according to [this](https://ops.tips/blog/sending-files-via-grpc/), So use it with care!
 
 you can refer these articles for more:
+
 [Sending files via gRPC](https://ops.tips/blog/sending-files-via-grpc/)
+
 [Upload/Download performance with gRPC ](https://github.com/grpc/grpc-dotnet/issues/1186)
+
 [Use gRPC to share very large file](https://stackoverflow.com/questions/62470323/use-grpc-to-share-very-large-file)
 
 ## Feature to Add 
