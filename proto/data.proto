@@ -1,0 +1,46 @@
+syntax = "proto3";
+package  tonic_sqlite;
+
+service Crud {
+	rpc Create(stream Data) returns (ResponseCreate);
+	rpc Read(DataQuery) returns (stream ResponseRead);
+	rpc Update(DataUpdate) returns (ResponseChange);
+	rpc Delete(DataQuery) returns (ResponseChange);
+}
+
+
+message Data {
+	optional int32 id = 1;
+	string name = 2;
+	string mime = 3;
+	optional int32 created = 4;
+	optional int32 updated = 5;
+	bytes content = 6;
+}
+
+message DataQuery {
+	string query = 1;
+}
+
+message DataUpdate {
+	string update = 1;
+	optional bytes content = 2;
+}
+
+message ResponseCreate {
+	bool ok = 1;
+	int32 id = 2;
+	string desc = 3;
+}
+
+message ResponseRead {
+	bool ok = 1;
+	optional string desc = 2;
+	Data results = 3;
+}
+
+message ResponseChange {
+	bool ok = 1;
+	optional string desc = 2;
+	int32 rows = 3;
+}
