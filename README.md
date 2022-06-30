@@ -18,7 +18,7 @@ on another side, to run client
 ```sh 
 cargo build --bin client 
 ```
-It will insert the file `input.txt` into remote server, then read it, update its id and finally delete it.
+It will insert the file's content `input.txt` into remote server, then read it, update its id and finally delete it.
 
 ## Development
 
