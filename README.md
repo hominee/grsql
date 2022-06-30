@@ -40,6 +40,8 @@ then implement them according to that in `src/server.rs`
 
 ## Notes
 
+**No authentication implement so far**
+
 gRPC is designed to deal with service that processes small and frequent communication, not for large file tranfer(file upload/download), if you do so, the performance is worse than `HTTP2`.
 It is better that the file is less than 1M according to [this](https://ops.tips/blog/sending-files-via-grpc/), So use it with care!
 
@@ -49,6 +51,8 @@ you can refer these articles for more:
 [Use gRPC to share very large file](https://stackoverflow.com/questions/62470323/use-grpc-to-share-very-large-file)
 
 ## Feature to Add 
+
+- [ ] Add Athentication 
 
 Due to the issues mentioned above, it is desired to 
   - [ ] add a http2 module to handle large file upload/download.
