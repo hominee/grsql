@@ -1,4 +1,4 @@
-**Grsql** is a great tool to allow you set up your remote sqlite database as service and **CRUD**(create/read/update/delete) it using gRPC.
+**Grsql** is a great tool to allow you set up your remote sqlite database as service and **CRUD** (create/ read/ update/ delete) it using gRPC.
 
 ## Why Create This 
 
